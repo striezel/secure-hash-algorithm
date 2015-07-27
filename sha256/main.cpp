@@ -21,9 +21,9 @@
 #include <iostream>
 #include <set>
 #include <string>
-#include "../libthoro/common/DirectoryFileList.h"
-#include "../libthoro/hashfunctions/sha-256.h"
-#include "../libthoro/hashfunctions/sha-1.h"
+#include "../libthoro/filesystem/FileFunctions.hpp"
+#include "../libthoro/hash/sha-256.h"
+#include "../libthoro/hash/sha-1.h"
 
 //return codes
 const int rcInvalidParameter = 1;
@@ -132,7 +132,7 @@ int main(int argc, char **argv)
         else
         {
           //should be filename
-          if (FileExists(param))
+          if (libthoro::filesystem::File::exists(param))
           {
             //add file to list
             files.insert(param);

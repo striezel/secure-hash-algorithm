@@ -33,16 +33,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../libthoro/common/DirectoryFileList.cpp" />
-		<Unit filename="../libthoro/common/DirectoryFileList.h" />
-		<Unit filename="../libthoro/hashfunctions/sha-1-256_functions.h" />
-		<Unit filename="../libthoro/hashfunctions/sha-1.cpp" />
-		<Unit filename="../libthoro/hashfunctions/sha-1.h" />
-		<Unit filename="../libthoro/hashfunctions/sha-256.cpp" />
-		<Unit filename="../libthoro/hashfunctions/sha-256.h" />
-		<Unit filename="../libthoro/hashfunctions/sha-256_functions.h" />
-		<Unit filename="../libthoro/hashfunctions/sha-256_sources.cpp" />
-		<Unit filename="../libthoro/hashfunctions/sha-256_sources.h" />
+		<Unit filename="../libthoro/common/StringUtils.cpp" />
+		<Unit filename="../libthoro/common/StringUtils.h" />
+		<Unit filename="../libthoro/filesystem/FileFunctions.cpp" />
+		<Unit filename="../libthoro/filesystem/FileFunctions.hpp" />
+		<Unit filename="../libthoro/hash/sha-1-256_functions.h" />
+		<Unit filename="../libthoro/hash/sha-1.cpp" />
+		<Unit filename="../libthoro/hash/sha-1.h" />
+		<Unit filename="../libthoro/hash/sha-256.cpp" />
+		<Unit filename="../libthoro/hash/sha-256.h" />
+		<Unit filename="../libthoro/hash/sha-256_functions.h" />
+		<Unit filename="../libthoro/hash/sha-256_sources.cpp" />
+		<Unit filename="../libthoro/hash/sha-256_sources.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
