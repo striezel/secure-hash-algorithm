@@ -1,0 +1,3 @@
+[submodule "libthoro"]
+	path = libthoro
+	url = git://git.code.sf.net/p/libthoro/code
