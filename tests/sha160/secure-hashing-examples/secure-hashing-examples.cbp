@@ -24,11 +24,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../../../../libthoro/hash/sha-256_sources.cpp" />
-		<Unit filename="../../../../libthoro/hash/sha-256_sources.hpp" />
 		<Unit filename="../../../libthoro/hash/sha-1-256_functions.hpp" />
-		<Unit filename="../../../libthoro/hash/sha-1.cpp" />
-		<Unit filename="../../../libthoro/hash/sha-1.hpp" />
+		<Unit filename="../../../libthoro/hash/sha1/sha1.cpp" />
+		<Unit filename="../../../libthoro/hash/sha1/sha1.hpp" />
+		<Unit filename="../../../libthoro/hash/sha256/BufferSource.cpp" />
+		<Unit filename="../../../libthoro/hash/sha256/BufferSource.hpp" />
+		<Unit filename="../../../libthoro/hash/sha256/FileSource.cpp" />
+		<Unit filename="../../../libthoro/hash/sha256/FileSource.hpp" />
+		<Unit filename="../../../libthoro/hash/sha256/MessageSource.cpp" />
+		<Unit filename="../../../libthoro/hash/sha256/MessageSource.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

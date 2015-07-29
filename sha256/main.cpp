@@ -22,8 +22,8 @@
 #include <set>
 #include <string>
 #include "../libthoro/filesystem/FileFunctions.hpp"
-#include "../libthoro/hash/sha-256.hpp"
-#include "../libthoro/hash/sha-1.hpp"
+#include "../libthoro/hash/sha256/sha256.hpp"
+#include "../libthoro/hash/sha1/sha1.hpp"
 
 //return codes
 const int rcInvalidParameter = 1;

@@ -18,13 +18,14 @@
  -----------------------------------------------------------------------------
 */
 
+#include <fstream>
 #include <iostream>
 #include <string>
 #include <tuple>
 #include <vector>
 #include "../../../libthoro/filesystem/DirectoryFunctions.hpp"
 #include "../../../libthoro/filesystem/FileFunctions.hpp"
-#include "../../../libthoro/hash/sha-256.hpp"
+#include "../../../libthoro/hash/sha256/sha256.hpp"
 
 /*
   The following example test messages and digests are take from
