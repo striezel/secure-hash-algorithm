@@ -25,16 +25,16 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="../../../libthoro/hash/sha-256_sources.cpp" />
-		<Unit filename="../../../libthoro/hash/sha-256_sources.h" />
+		<Unit filename="../../../libthoro/hash/sha-256_sources.hpp" />
 		<Unit filename="../../../libthoro/common/StringUtils.cpp" />
 		<Unit filename="../../../libthoro/common/StringUtils.h" />
 		<Unit filename="../../../libthoro/filesystem/DirectoryFunctions.cpp" />
 		<Unit filename="../../../libthoro/filesystem/DirectoryFunctions.hpp" />
 		<Unit filename="../../../libthoro/filesystem/FileFunctions.cpp" />
 		<Unit filename="../../../libthoro/filesystem/FileFunctions.hpp" />
-		<Unit filename="../../../libthoro/hash/sha-1-256_functions.h" />
+		<Unit filename="../../../libthoro/hash/sha-1-256_functions.hpp" />
 		<Unit filename="../../../libthoro/hash/sha-256.cpp" />
-		<Unit filename="../../../libthoro/hash/sha-256.h" />
+		<Unit filename="../../../libthoro/hash/sha-256.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

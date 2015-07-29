@@ -22,7 +22,7 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include "../../../libthoro/hash/sha-256.h"
+#include "../../../libthoro/hash/sha-256.hpp"
 
 /*
   The following example test messages and digests are take from

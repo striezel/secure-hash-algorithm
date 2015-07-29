@@ -24,7 +24,7 @@
 #include <vector>
 #include "../../../libthoro/filesystem/DirectoryFunctions.hpp"
 #include "../../../libthoro/filesystem/FileFunctions.hpp"
-#include "../../../libthoro/hash/sha-256.h"
+#include "../../../libthoro/hash/sha-256.hpp"
 
 /*
   The following example test messages and digests are take from
