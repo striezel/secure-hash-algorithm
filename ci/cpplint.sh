@@ -23,6 +23,8 @@ then
   CXX=g++
 fi
 
+# CFLAGS need to be set for some files in libthoro/, because they require the
+# include path for libxml2 headers.
 if [[ -x /usr/bin/xml2-config ]]
 then
   CFLAGS=$(/usr/bin/xml2-config --cflags)
