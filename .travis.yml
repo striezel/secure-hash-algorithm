@@ -4,6 +4,7 @@ compiler:
   - gcc
 sudo: false
 script:
+  - ./ci/cpplint.sh
   - mkdir ./build
   - cd ./build
   - cmake ../
