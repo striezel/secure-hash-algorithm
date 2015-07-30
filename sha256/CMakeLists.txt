@@ -8,10 +8,11 @@ project(sha256)
 set(sha256_sources
     ../libthoro/common/StringUtils.cpp
     ../libthoro/filesystem/FileFunctions.cpp
+    ../libthoro/hash/sha1/FileSourceUtility.cpp
     ../libthoro/hash/sha1/sha1.cpp
     ../libthoro/hash/sha256/sha256.cpp
-    ../libthoro/hash/sha256/BufferSource.cpp
     ../libthoro/hash/sha256/FileSource.cpp
+    ../libthoro/hash/sha256/FileSourceUtility.cpp
     ../libthoro/hash/sha256/MessageSource.cpp
     main.cpp)
 

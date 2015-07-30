@@ -6,7 +6,7 @@ project(test_simple_sha256)
 
 set(test_simple_sha256_src
     ../../../libthoro/hash/sha256/BufferSource.cpp
-    ../../../libthoro/hash/sha256/FileSource.cpp
+    ../../../libthoro/hash/sha256/BufferSourceUtility.cpp
     ../../../libthoro/hash/sha256/MessageSource.cpp
     ../../../libthoro/hash/sha256/sha256.cpp
     main.cpp)

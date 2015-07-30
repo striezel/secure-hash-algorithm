@@ -8,8 +8,8 @@ set(test_additional_sha256_src
     ../../../libthoro/common/StringUtils.cpp
     ../../../libthoro/filesystem/DirectoryFunctions.cpp
     ../../../libthoro/filesystem/FileFunctions.cpp
-    ../../../libthoro/hash/sha256/BufferSource.cpp
     ../../../libthoro/hash/sha256/FileSource.cpp
+    ../../../libthoro/hash/sha256/FileSourceUtility.cpp
     ../../../libthoro/hash/sha256/MessageSource.cpp
     ../../../libthoro/hash/sha256/sha256.cpp
     main.cpp)

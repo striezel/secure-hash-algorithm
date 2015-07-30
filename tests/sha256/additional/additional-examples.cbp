@@ -31,10 +31,10 @@
 		<Unit filename="../../../libthoro/filesystem/FileFunctions.cpp" />
 		<Unit filename="../../../libthoro/filesystem/FileFunctions.hpp" />
 		<Unit filename="../../../libthoro/hash/sha-1-256_functions.hpp" />
-		<Unit filename="../../../libthoro/hash/sha256/BufferSource.cpp" />
-		<Unit filename="../../../libthoro/hash/sha256/BufferSource.hpp" />
 		<Unit filename="../../../libthoro/hash/sha256/FileSource.cpp" />
 		<Unit filename="../../../libthoro/hash/sha256/FileSource.hpp" />
+		<Unit filename="../../../libthoro/hash/sha256/FileSourceUtility.cpp" />
+		<Unit filename="../../../libthoro/hash/sha256/FileSourceUtility.hpp" />
 		<Unit filename="../../../libthoro/hash/sha256/MessageSource.cpp" />
 		<Unit filename="../../../libthoro/hash/sha256/MessageSource.hpp" />
 		<Unit filename="../../../libthoro/hash/sha256/sha256.cpp" />

@@ -23,6 +23,7 @@
 #include <vector>
 #include <utility>
 #include "../../../libthoro/hash/sha256/sha256.hpp"
+#include "../../../libthoro/hash/sha256/BufferSourceUtility.hpp"
 
 /*
   The following example test messages and digests are take from

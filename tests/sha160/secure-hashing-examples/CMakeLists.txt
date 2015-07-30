@@ -5,8 +5,8 @@ cmake_minimum_required (VERSION 2.8)
 project(test_simple_sha1)
 
 set(test_simple_sha1_src
+    ../../../libthoro/hash/sha1/BufferSourceUtility.cpp
     ../../../libthoro/hash/sha256/BufferSource.cpp
-    ../../../libthoro/hash/sha256/FileSource.cpp
     ../../../libthoro/hash/sha256/MessageSource.cpp
     ../../../libthoro/hash/sha1/sha1.cpp
     main.cpp)

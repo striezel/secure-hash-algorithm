@@ -23,7 +23,11 @@
 #include <string>
 #include "../libthoro/filesystem/FileFunctions.hpp"
 #include "../libthoro/hash/sha256/sha256.hpp"
+#include "../libthoro/hash/sha256/FileSource.hpp"
+#include "../libthoro/hash/sha256/FileSourceUtility.hpp"
 #include "../libthoro/hash/sha1/sha1.hpp"
+#include "../libthoro/hash/sha1/FileSource.hpp"
+#include "../libthoro/hash/sha1/FileSourceUtility.hpp"
 
 //return codes
 const int rcInvalidParameter = 1;
