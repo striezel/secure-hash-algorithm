@@ -6,7 +6,6 @@ project(test_additional_sha512)
 
 set(test_additional_sha512_src
     ../../../libthoro/common/StringUtils.cpp
-    ../../../libthoro/filesystem/DirectoryFunctions.cpp
     ../../../libthoro/filesystem/FileFunctions.cpp
     ../../../libthoro/hash/sha512/FileSourceUtility.cpp
     ../../../libthoro/hash/sha512/sha512.cpp

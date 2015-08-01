@@ -26,19 +26,16 @@
 		</Compiler>
 		<Unit filename="../../../libthoro/common/StringUtils.cpp" />
 		<Unit filename="../../../libthoro/common/StringUtils.h" />
-		<Unit filename="../../../libthoro/filesystem/DirectoryFunctions.cpp" />
-		<Unit filename="../../../libthoro/filesystem/DirectoryFunctions.hpp" />
 		<Unit filename="../../../libthoro/filesystem/FileFunctions.cpp" />
 		<Unit filename="../../../libthoro/filesystem/FileFunctions.hpp" />
+		<Unit filename="../../../libthoro/hash/sha512/FileSource.cpp" />
 		<Unit filename="../../../libthoro/hash/sha512/FileSource.hpp" />
 		<Unit filename="../../../libthoro/hash/sha512/FileSourceUtility.cpp" />
 		<Unit filename="../../../libthoro/hash/sha512/FileSourceUtility.hpp" />
-		<Unit filename="../../../libthoro/hash/sha512/sha512.cpp" />
-		<Unit filename="../../../libthoro/hash/sha512/sha512.hpp" />
-		<Unit filename="../../../libthoro/hash/sha512/FileSource.cpp" />
-		<Unit filename="../../../libthoro/hash/sha512/FileSource.hpp" />
 		<Unit filename="../../../libthoro/hash/sha512/MessageSource.cpp" />
 		<Unit filename="../../../libthoro/hash/sha512/MessageSource.hpp" />
+		<Unit filename="../../../libthoro/hash/sha512/sha512.cpp" />
+		<Unit filename="../../../libthoro/hash/sha512/sha512.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
