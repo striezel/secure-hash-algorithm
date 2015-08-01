@@ -43,6 +43,11 @@
 		<Unit filename="../libthoro/hash/sha1/FileSourceUtility.hpp" />
 		<Unit filename="../libthoro/hash/sha1/sha1.cpp" />
 		<Unit filename="../libthoro/hash/sha1/sha1.hpp" />
+		<Unit filename="../libthoro/hash/sha224/FileSource.hpp" />
+		<Unit filename="../libthoro/hash/sha224/FileSourceUtility.cpp" />
+		<Unit filename="../libthoro/hash/sha224/FileSourceUtility.hpp" />
+		<Unit filename="../libthoro/hash/sha224/sha224.cpp" />
+		<Unit filename="../libthoro/hash/sha224/sha224.hpp" />
 		<Unit filename="../libthoro/hash/sha256/FileSource.cpp" />
 		<Unit filename="../libthoro/hash/sha256/FileSource.hpp" />
 		<Unit filename="../libthoro/hash/sha256/FileSourceUtility.cpp" />

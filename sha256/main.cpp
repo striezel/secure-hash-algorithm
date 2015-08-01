@@ -25,6 +25,9 @@
 #include "../libthoro/hash/sha256/sha256.hpp"
 #include "../libthoro/hash/sha256/FileSource.hpp"
 #include "../libthoro/hash/sha256/FileSourceUtility.hpp"
+#include "../libthoro/hash/sha224/sha224.hpp"
+#include "../libthoro/hash/sha224/FileSource.hpp"
+#include "../libthoro/hash/sha224/FileSourceUtility.hpp"
 #include "../libthoro/hash/sha1/sha1.hpp"
 #include "../libthoro/hash/sha1/FileSource.hpp"
 #include "../libthoro/hash/sha1/FileSourceUtility.hpp"
@@ -35,7 +38,7 @@ const int rcInvalidParameter = 1;
 void showGPLNotice()
 {
   std::cout << "SHA-256 file hash calculator\n"
-            << "  Copyright (C) 2012 Thoronador\n"
+            << "  Copyright (C) 2012, 2015  Thoronador\n"
             << "\n"
             << "  This programme is free software: you can redistribute it and/or\n"
             << "  modify it under the terms of the GNU General Public License as published\n"
@@ -55,12 +58,12 @@ void showGPLNotice()
 void showVersion()
 {
   showGPLNotice();
-  std::cout << "SHA-256 file hash calculator, version 1.1, 2012-09-18\n";
+  std::cout << "SHA-256 file hash calculator, version 1.2, 2015-08-01\n";
 }
 
 void showHelp()
 {
-  std::cout << "\nsha256 [--sha1 | --sha256] FILENAME\n"
+  std::cout << "\nsha256 [--sha1 | --sha224 | --sha256] FILENAME\n"
             << "\n"
             << "options:\n"
             << "  --help           - displays this help message and quits\n"
@@ -70,6 +73,7 @@ void showHelp()
             << "  FILENAME         - set path to file that should be hashed. Can be repeated\n"
             << "                     multiple times.\n"
             << "  --sha1           - use SHA-1 instead of SHA-256 to hash files.\n"
+            << "  --sha224         - use SHA-224 instead of SHA-256 to hash files.\n"
             << "  --sha256         - use SHA-256 to hash files. This option is active by\n"
             << "                     default.\n";
 }
@@ -78,7 +82,7 @@ int main(int argc, char **argv)
 {
   std::set<std::string> files;
 
-  enum SHAHashType {htUnspecified, htSHA1, htSHA256 };
+  enum SHAHashType {htUnspecified, htSHA1, htSHA224, htSHA256 };
 
   SHAHashType hashType = htUnspecified;
 
@@ -118,6 +122,21 @@ int main(int argc, char **argv)
           }
           hashType = htSHA1;
         }//sha-1
+        else if ((param=="--sha224") or (param=="--sha-224"))
+        {
+          if (hashType==htSHA224)
+          {
+            std::cout << "Error: parameter " << param << " must not occur more than once!\n";
+            return rcInvalidParameter;
+          }
+          if (hashType!=htUnspecified)
+          {
+            std::cout << "Error: parameter " << param << " must not occur "
+                      << "after hash type has already been set!\n";
+            return rcInvalidParameter;
+          }
+          hashType = htSHA224;
+        }//sha-224
         else if ((param=="--sha256") or (param=="--sha-256"))
         {
           if (hashType==htSHA256)
@@ -165,12 +184,14 @@ int main(int argc, char **argv)
     return rcInvalidParameter;
   }
 
-  if (hashType==htUnspecified) hashType = htSHA256;
+  if (hashType==htUnspecified)
+    hashType = htSHA256;
 
   std::cout << std::endl << "Hashing file(s), this may take a while..." << std::endl;
 
   std::set<std::string>::const_iterator iter = files.begin();
   SHA256::MessageDigest hash256;
+  SHA224::MessageDigest hash224;
   SHA1::MessageDigest hash160;
   while (iter!=files.end())
   {
@@ -179,6 +200,10 @@ int main(int argc, char **argv)
       case htSHA1:
            hash160 = SHA1::computeFromFile(*iter);
            std::cout << hash160.toHexString() << "  " << *iter << std::endl;
+           break;
+      case htSHA224:
+           hash224 = SHA224::computeFromFile(*iter);
+           std::cout << hash224.toHexString() << "  " << *iter << std::endl;
            break;
       default:
            hash256 = SHA256::computeFromFile(*iter);

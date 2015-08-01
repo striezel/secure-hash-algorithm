@@ -10,6 +10,8 @@ set(sha256_sources
     ../libthoro/filesystem/FileFunctions.cpp
     ../libthoro/hash/sha1/FileSourceUtility.cpp
     ../libthoro/hash/sha1/sha1.cpp
+    ../libthoro/hash/sha224/FileSourceUtility.cpp
+    ../libthoro/hash/sha224/sha224.cpp
     ../libthoro/hash/sha256/sha256.cpp
     ../libthoro/hash/sha256/FileSource.cpp
     ../libthoro/hash/sha256/FileSourceUtility.cpp
