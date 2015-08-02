@@ -13,11 +13,22 @@ before_install:
 #    - libxml2-dev
 #    - zlib1g-dev
 script:
-  - ./ci/cpplint.sh
-  - mkdir ./build
-  - cd ./build
-  - cmake ../
-  - make -j2
-  - ctest -V
+  - echo "Coverity stuff should be done by now."
 notifications:
   email: false
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "ZiQ0uKgzhfzD5cIrjQ+NUl1/zFIOozPhyIz+T4AIkJqTBw26AU3WmeDvDImfeMX2fozTzsaVaSadU9A7J8RGmRHwnnlJK4ffFuj1AeSUEixEoPBa/By4p4K/86FwMA27/Kzg4A9vOmkOwYiXRAueICt0gBGawkltgOI+SKQcvMN1mi23IGrPwswISimpDe7AX1Sq42v+1uPTn9nD5xsX4P+YfV1NJa7CcATYQ2Vs9q4+kXLB0VDZETKkF2xU3VVv8zoR1N5gk1sxid62WVO6uQiOb54utVM/b9dAuw+0P+IFj66piI5eGpMRoDyaNsXVvy2XYaSnTMp+mskg4vBYXa0TscCTzGxHCQBwUTDa8Kr6k1Len7nBVs0/kUoNN3Hz/mfUBaFl0DDzKL0Lm52jC3MBc9p9dsfaXfICFaIrj5ADOIQHFEg1FUd4sTgH/qthMVBVCbJ6p6SBD+nqxXDz3j+I8F1FJtaFHLFnCsORR4TD8b74y6x8Unjlsvs8MfyfxyiQfO5dbRvQAIT20Z/Jg03JEdSHnF+G8IjqG5wL19DfZ8KITEVh1Q1peUd+NHSMLQKDvJVtDYC7NpR5OnpkvqJRmYkLVuLyoQk8MOhf1n/Kgh8loEKMN+5gc88gxpljLs5kFRZ17ko7//iqs1LW+uNZ3Uph0xtGIssKswLIHs8="
+
+addons:
+  coverity_scan:
+    project:
+      name: "Thoronador/secure-hash-algorithm"
+      description: "program for SHA calculations"
+    notification_email: thoronador@users.sourceforge.net
+    build_command_prepend: "cmake ./"
+    build_command:   "make -j2"
+    branch_pattern: coverity_scan
