@@ -133,7 +133,16 @@ int main(int argc, char** argv)
     if (hashLongData || (std::get<0>(item)<= cShortMaximum))
     {
       //generate buffer from data
-      buffer = new uint8_t[std::get<0>(item)];
+      try
+      {
+        buffer = new uint8_t[std::get<0>(item)];
+      }
+      catch (...)
+      {
+        std::cout << "Error: Failed to allocate buffer of " << std::get<0>(item)
+                  << " bytes!" << std::endl;
+        return 1;
+      } //try-catch
       memset(buffer, std::get<1>(item), std::get<0>(item));
 
       //reset hash
