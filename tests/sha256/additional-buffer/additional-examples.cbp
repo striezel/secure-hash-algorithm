@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="additional-buffer-sha256-examples" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/additional-buffer-sha256-examples" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++0x" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../../../libthoro/hash/sha-1-256_functions.hpp" />
+		<Unit filename="../../../libthoro/hash/sha256/BufferSource.cpp" />
+		<Unit filename="../../../libthoro/hash/sha256/BufferSource.hpp" />
+		<Unit filename="../../../libthoro/hash/sha256/BufferSourceUtility.cpp" />
+		<Unit filename="../../../libthoro/hash/sha256/BufferSourceUtility.hpp" />
+		<Unit filename="../../../libthoro/hash/sha256/MessageSource.cpp" />
+		<Unit filename="../../../libthoro/hash/sha256/MessageSource.hpp" />
+		<Unit filename="../../../libthoro/hash/sha256/sha256.cpp" />
+		<Unit filename="../../../libthoro/hash/sha256/sha256.hpp" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

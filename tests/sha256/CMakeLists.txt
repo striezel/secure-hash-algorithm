@@ -5,4 +5,7 @@ cmake_minimum_required(VERSION 2.8)
 add_subdirectory (secure-hashing-examples)
 
 # Recurse into subdirectory for additional test.
-add_subdirectory (additional)
+add_subdirectory (additional-file)
+
+# Recurse into subdirectory for additional buffer source test.
+add_subdirectory (additional-buffer)
