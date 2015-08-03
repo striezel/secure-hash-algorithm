@@ -2,16 +2,16 @@
 
 [![Build Status](https://travis-ci.org/Thoronador/secure-hash-algorithm.svg)](https://travis-ci.org/Thoronador/secure-hash-algorithm)
 
-##Purpose of the programme
+##Purpose of the program
 
-The sha256 programme calculates and prints SHA-256 (256bit) checksums
+The sha256 program calculates and prints SHA-256 (256bit) checksums
 of all files that are passed to it as command line parameters.
 As of version 1.1 it can also be used to calculate SHA-1 (160bit)
 checksums, if desired. Version 1.2 also offers SHA-224 (224bit checksum).
 
-## Programme call
+## Program call
 
-Since this (obviously) is a command line programme, you can call it
+Since this (obviously) is a command line program, you can call it
 via command line/ shell. A list of valid options follows below.
 
 
@@ -32,7 +32,7 @@ via command line/ shell. A list of valid options follows below.
       Calculate SHA-256 (256bit) checksums. This is the default.
 
   --help
-      Show a help message and list valid programme options.
+      Show a help message and list valid program options.
 
   --version
       Print version information and quit.
@@ -47,7 +47,7 @@ A typical call could look like:
 
 This would calculate the SHA-256 message digests of foo.txt and
 bar.baz in the subdirectory some_dir. If one of the given files does
-not exist, the programme quits.
+not exist, the program quits.
 
 
 ##License, disclaimer and source code
@@ -62,6 +62,6 @@ WITHOUT ANY WARRANTY; without even the implied warranty of MERCHAN-
 TABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
 Public License for more details.
 
-The programme's source code is published at GitHub.com, the
+The program's source code is published at GitHub.com, the
 project itself is located at
   <https://github.com/Thoronador/secure-hash-algorithm>
