@@ -57,6 +57,15 @@
 		<Unit filename="../libthoro/hash/sha256/functions.hpp" />
 		<Unit filename="../libthoro/hash/sha256/sha256.cpp" />
 		<Unit filename="../libthoro/hash/sha256/sha256.hpp" />
+		<Unit filename="../libthoro/hash/sha512/FileSource.cpp" />
+		<Unit filename="../libthoro/hash/sha512/FileSource.hpp" />
+		<Unit filename="../libthoro/hash/sha512/FileSourceUtility.cpp" />
+		<Unit filename="../libthoro/hash/sha512/FileSourceUtility.hpp" />
+		<Unit filename="../libthoro/hash/sha512/MessageSource.cpp" />
+		<Unit filename="../libthoro/hash/sha512/MessageSource.hpp" />
+		<Unit filename="../libthoro/hash/sha512/functions.hpp" />
+		<Unit filename="../libthoro/hash/sha512/sha512.cpp" />
+		<Unit filename="../libthoro/hash/sha512/sha512.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

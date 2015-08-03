@@ -16,6 +16,10 @@ set(sha256_sources
     ../libthoro/hash/sha256/FileSource.cpp
     ../libthoro/hash/sha256/FileSourceUtility.cpp
     ../libthoro/hash/sha256/MessageSource.cpp
+    ../libthoro/hash/sha512/FileSource.cpp
+    ../libthoro/hash/sha512/FileSourceUtility.cpp
+    ../libthoro/hash/sha512/MessageSource.cpp
+    ../libthoro/hash/sha512/sha512.cpp
     main.cpp)
 
 if (CMAKE_COMPILER_IS_GNUCC)

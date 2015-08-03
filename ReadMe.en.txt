@@ -10,7 +10,8 @@ Purpose of the program:
 The sha256 program calculates and prints SHA-256 (256bit) checksums of
 all files that are passed to it as command line parameters.
 As of version 1.1 it can also be used to calculate SHA-1 (160bit)
-checksums, if desired. Version 1.2 also offers SHA-224 (224bit checksum).
+checksums, if desired. Version 1.2 also offers SHA-224 (224bit checksum),
+Version 1.3 added SHA-512 (512bit checksum).
 
 
 Program call:
@@ -23,7 +24,7 @@ command line/ shell. A list of valid options follows below.
 Synopsis:
 ---------
 
-  sha256 [--sha1 | --sha224 | --sha256] FILENAME ...
+  sha256 [--sha1 | --sha224 | --sha256 | --sha512] FILENAME ...
 
 
 Options + parameters:
@@ -37,6 +38,9 @@ Options + parameters:
 
   --sha256
       Calculate SHA-256 (256bit) checksums. This is the default.
+
+  --sha512
+      Calculate SHA-512 (512bit) checksums instead of SHA-256.
 
   --help
       Show a help message and list valid program options.

@@ -25,7 +25,7 @@ folgt.
 Übersicht:
 ----------
 
-  sha256 [--sha1 | --sha224 | --sha256] DATEINAME ...
+  sha256 [--sha1 | --sha224 | --sha256 | --sha512] DATEINAME ...
 
 
 Optionen + Parameter:
@@ -40,6 +40,9 @@ Optionen + Parameter:
   --sha256
       Berechnet SHA-256-Prüfsummen (256bit). Dies ist die Standard-
       vorgabe.
+
+  --sha512
+      Berechnet SHA-512-Prüfsummen (512bit) anstelle von SHA-256.
 
   --help
       Zeigt einen (englischen) Hilfetext und listet gültige Programm-
