@@ -25,7 +25,7 @@ folgt.
 Übersicht:
 ----------
 
-  sha256 [--sha1 | --sha256] DATEINAME ...
+  sha256 [--sha1 | --sha224 | --sha256] DATEINAME ...
 
 
 Optionen + Parameter:
@@ -33,6 +33,9 @@ Optionen + Parameter:
 
   --sha1
       Berechnet SHA-1-Prüfsummen (160bit) anstelle von SHA-256.
+
+  --sha224
+      Berechnet SHA-224-Prüfsummen (224bit) anstelle von SHA-256.
 
   --sha256
       Berechnet SHA-256-Prüfsummen (256bit). Dies ist die Standard-
@@ -62,9 +65,9 @@ angegebenen Dateien nicht existiert, bricht das Programm ab.
 Lizenz und Quellcode
 ====================
 
-Das Programm sha256 steht unter der GNU General Public Licence 3,
+Das Programm sha256 steht unter der GNU General Public License 3,
 einer freien Softwarelizenz. Der volle Text der Lizenz ist in der
-Datei GPL.txt enthalten und kann auch auf
+Datei LICENSE enthalten und kann auch auf
   http://www.gnu.org/licenses/gpl-3.0.html
 eingesehen werden.
 
@@ -75,8 +78,8 @@ dieser Lizenz „so wie es ist“ ohne jegliche Gewährleistung zur Verfü-
 gung gestellt. Dies gilt unter anderem - aber nicht ausschließlich -
 für Verwendbarkeit für einen bestimmten Zweck, Mängelfreiheit und
 Richtigkeit (siehe dazu die entsprechenden Abschnitte der GNU General
-Public Licence 3).
+Public License 3).
 
-Der Quellcode des Programms lässt sich auf Sourceforge.net einsehen,
+Der Quellcode des Programms lässt sich auf GitHub.com einsehen,
 das Projekt findet sich unter
-  http://sourceforge.net/projects/random-thoro/
+  https://github.com/Thoronador/secure-hash-algorithm
