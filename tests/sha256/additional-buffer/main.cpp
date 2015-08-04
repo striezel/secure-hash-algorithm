@@ -142,7 +142,16 @@ int main(int argc, char** argv)
     if (hashLongFiles || (std::get<0>(item)<= cShortMaximum))
     {
       //generate buffer from data
-      buffer = new uint8_t[std::get<0>(item)];
+      try
+      {
+        buffer = new uint8_t[std::get<0>(item)];
+      }
+      catch(...)
+      {
+        std::cout << "Error: Could not create buffer of " << std::get<0>(item)
+                  << " bytes. Aborting test." << std::endl;
+        return 1;
+      } //try-catch
       memset(buffer, std::get<1>(item), std::get<0>(item));
 
       //reset hash
