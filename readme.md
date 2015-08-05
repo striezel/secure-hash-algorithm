@@ -55,6 +55,47 @@ This would calculate the SHA-256 message digests of foo.txt and
 bar.baz in the subdirectory some_dir. If one of the given files does
 not exist, the program quits.
 
+# Building from source
+
+## Prerequisites
+
+To build sha256 from source you need a C++ compiler and CMake 2.8 or later.
+It also helps to have Git, a distributed version control system, on your build
+system to get the latest source code directly from the Git repository.
+
+All three can usually be installed be typing
+
+    apt-get install cmake g++ git
+
+or
+
+    yum install cmake gcc-c++ git
+
+into a root terminal.
+
+## Getting the source code
+
+Get the source directly from Git by cloning the Git repository and change to
+the directory after the repository is completely cloned:
+
+    git clone https://github.com/Thoronador/secure-hash-algorithm.git ./sha256
+    cd sha256
+    git submodule update --init --recursive
+
+The last of the lines above initializes and updates the submodule that the
+sha256 source code needs, too, to be build from source.
+
+## Build process
+
+The build process is relatively easy, because CMake does all the preparations.
+Starting in the root directory of the source, you can do the following steps:
+
+    mkdir build
+    cd build
+    cmake ../
+    make sha256 -j2
+
+Now the sha256 binary is built and ready for use.
 
 ##License, disclaimer and source code
 
