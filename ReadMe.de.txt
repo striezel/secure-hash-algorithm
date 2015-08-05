@@ -25,34 +25,37 @@ folgt.
 Ãœbersicht:
 ----------
 
-  sha256 [--sha1 | --sha224 | --sha256 | --sha512] DATEINAME ...
+  sha256 [--sha1 | --sha224 | --sha256 | --sha384 | --sha512] DATEINAME ...
 
 
 Optionen + Parameter:
 ---------------------
 
   --sha1
-      Berechnet SHA-1-PrÃ¼fsummen (160bit) anstelle von SHA-256.
+      Berechnet SHA-1-Prüfsummen (160bit) anstelle von SHA-256.
 
   --sha224
-      Berechnet SHA-224-PrÃ¼fsummen (224bit) anstelle von SHA-256.
+      Berechnet SHA-224-Prüfsummen (224bit) anstelle von SHA-256.
 
   --sha256
-      Berechnet SHA-256-PrÃ¼fsummen (256bit). Dies ist die Standard-
+      Berechnet SHA-256-Prüfsummen (256bit). Dies ist die Standard-
       vorgabe.
 
+  --sha384
+      Berechnet SHA-384-Prüfsummen (384bit) anstelle von SHA-256.
+
   --sha512
-      Berechnet SHA-512-PrÃ¼fsummen (512bit) anstelle von SHA-256.
+      Berechnet SHA-512-Prüfsummen (512bit) anstelle von SHA-256.
 
   --help
-      Zeigt einen (englischen) Hilfetext und listet gÃ¼ltige Programm-
+      Zeigt einen (englischen) Hilfetext und listet gültige Programm-
       optionen auf.
 
   --version
       Gibt Versionsinformationen aus und beendet das Programm.
 
   DATEINAME
-        Pfad zu einer Datei, deren PrÃ¼fsumme berechnet werden soll.
+        Pfad zu einer Datei, deren Prüfsumme berechnet werden soll.
         Kann mehrmals angegeben werden, um mehrere Dateien auszu-
         werten.
 
@@ -60,7 +63,7 @@ Ein typischer Aufruf kann so aussehen:
 
   sha256 foo.txt some_dir/bar.baz
 
-Damit wÃ¼rden die SHA-256-PrÃ¼fsummen von foo.txt und bar.baz im Unter-
+Damit würden die SHA-256-Prüfsummen von foo.txt und bar.baz im Unter-
 verzeichnis some_dir berechnet (und ausgegeben) werden. Falls eine der
 angegebenen Dateien nicht existiert, bricht das Programm ab.
 
@@ -74,15 +77,15 @@ Datei LICENSE enthalten und kann auch auf
   http://www.gnu.org/licenses/gpl-3.0.html
 eingesehen werden.
 
-Das Programm wurde in der Hoffnung, dass es nÃ¼tzlich ist, erstellt
-und verfÃ¼gbar gemacht. Das Programm ist nicht vollendet und kann daher
-Fehler ("Bugs") enthalten. Aus den genannten GrÃ¼nden wird es unter
-dieser Lizenz â€so wie es istâ€œ ohne jegliche GewÃ¤hrleistung zur VerfÃ¼-
-gung gestellt. Dies gilt unter anderem - aber nicht ausschlieÃŸlich -
-fÃ¼r Verwendbarkeit fÃ¼r einen bestimmten Zweck, MÃ¤ngelfreiheit und
+Das Programm wurde in der Hoffnung, dass es nützlich ist, erstellt
+und verfügbar gemacht. Das Programm ist nicht vollendet und kann daher
+Fehler ("Bugs") enthalten. Aus den genannten Gründen wird es unter
+dieser Lizenz "so wie es ist" ohne jegliche Gewährleistung zur Verfü-
+gung gestellt. Dies gilt unter anderem - aber nicht ausschließlich -
+für Verwendbarkeit für einen bestimmten Zweck, Mängelfreiheit und
 Richtigkeit (siehe dazu die entsprechenden Abschnitte der GNU General
 Public License 3).
 
-Der Quellcode des Programms lÃ¤sst sich auf GitHub.com einsehen,
+Der Quellcode des Programms lässt sich auf GitHub.com einsehen,
 das Projekt findet sich unter
   https://github.com/Thoronador/secure-hash-algorithm

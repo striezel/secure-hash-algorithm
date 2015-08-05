@@ -25,6 +25,9 @@
 #include "../libthoro/hash/sha512/sha512.hpp"
 #include "../libthoro/hash/sha512/FileSource.hpp"
 #include "../libthoro/hash/sha512/FileSourceUtility.hpp"
+#include "../libthoro/hash/sha384/sha384.hpp"
+#include "../libthoro/hash/sha384/FileSource.hpp"
+#include "../libthoro/hash/sha384/FileSourceUtility.hpp"
 #include "../libthoro/hash/sha256/sha256.hpp"
 #include "../libthoro/hash/sha256/FileSource.hpp"
 #include "../libthoro/hash/sha256/FileSourceUtility.hpp"
@@ -61,12 +64,12 @@ void showGPLNotice()
 void showVersion()
 {
   showGPLNotice();
-  std::cout << "SHA-256 file hash calculator, version 1.3, 2015-08-03\n";
+  std::cout << "SHA-256 file hash calculator, version 1.4, 2015-08-06\n";
 }
 
 void showHelp()
 {
-  std::cout << "\nsha256 [--sha1 | --sha224 | --sha256 | --sha512] FILENAME\n"
+  std::cout << "\nsha256 [--sha1 | --sha224 | --sha256 | --sha384 | --sha512] FILENAME\n"
             << "\n"
             << "options:\n"
             << "  --help           - displays this help message and quits\n"
@@ -79,6 +82,7 @@ void showHelp()
             << "  --sha224         - use SHA-224 instead of SHA-256 to hash files.\n"
             << "  --sha256         - use SHA-256 to hash files. This option is active by\n"
             << "                     default.\n"
+            << "  --sha384         - use SHA-384 instead of SHA-384 to hash files.\n"
             << "  --sha512         - use SHA-512 instead of SHA-256 to hash files.\n";
 }
 
@@ -86,7 +90,7 @@ int main(int argc, char **argv)
 {
   std::set<std::string> files;
 
-  enum SHAHashType {htUnspecified, htSHA1, htSHA224, htSHA256, htSHA512 };
+  enum SHAHashType { htUnspecified, htSHA1, htSHA224, htSHA256, htSHA384, htSHA512 };
 
   SHAHashType hashType = htUnspecified;
 
@@ -156,6 +160,21 @@ int main(int argc, char **argv)
           }
           hashType = htSHA256;
         }//sha-256
+        else if ((param=="--sha384") or (param=="--sha-384"))
+        {
+          if (hashType==htSHA384)
+          {
+            std::cout << "Error: parameter " << param << " must not occur more than once!\n";
+            return rcInvalidParameter;
+          }
+          if (hashType!=htUnspecified)
+          {
+            std::cout << "Error: parameter " << param << " must not occur "
+                      << "after hash type has already been set!\n";
+            return rcInvalidParameter;
+          }
+          hashType = htSHA384;
+        }//sha-384
         else if ((param=="--sha512") or (param=="--sha-512"))
         {
           if (hashType==htSHA512)
@@ -218,6 +237,7 @@ int main(int argc, char **argv)
 
   std::set<std::string>::const_iterator iter = files.begin();
   SHA512::MessageDigest hash512;
+  SHA384::MessageDigest hash384;
   SHA256::MessageDigest hash256;
   SHA224::MessageDigest hash224;
   SHA1::MessageDigest hash160;
@@ -232,6 +252,10 @@ int main(int argc, char **argv)
       case htSHA224:
            hash224 = SHA224::computeFromFile(*iter);
            std::cout << hash224.toHexString() << "  " << *iter << std::endl;
+           break;
+      case htSHA384:
+           hash384 = SHA384::computeFromFile(*iter);
+           std::cout << hash384.toHexString() << "  " << *iter << std::endl;
            break;
       case htSHA512:
            hash512 = SHA512::computeFromFile(*iter);
