@@ -1,7 +1,7 @@
 /*
  -------------------------------------------------------------------------------
     This file is part of the SHA-256 hash calculator.
-    Copyright (C) 2012, 2015  Dirk Stolle
+    Copyright (C) 2012, 2015, 2016  Dirk Stolle
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,22 +21,22 @@
 #include <iostream>
 #include <set>
 #include <string>
-#include "../libthoro/filesystem/FileFunctions.hpp"
-#include "../libthoro/hash/sha512/sha512.hpp"
-#include "../libthoro/hash/sha512/FileSource.hpp"
-#include "../libthoro/hash/sha512/FileSourceUtility.hpp"
-#include "../libthoro/hash/sha384/sha384.hpp"
-#include "../libthoro/hash/sha384/FileSource.hpp"
-#include "../libthoro/hash/sha384/FileSourceUtility.hpp"
-#include "../libthoro/hash/sha256/sha256.hpp"
-#include "../libthoro/hash/sha256/FileSource.hpp"
-#include "../libthoro/hash/sha256/FileSourceUtility.hpp"
-#include "../libthoro/hash/sha224/sha224.hpp"
-#include "../libthoro/hash/sha224/FileSource.hpp"
-#include "../libthoro/hash/sha224/FileSourceUtility.hpp"
-#include "../libthoro/hash/sha1/sha1.hpp"
-#include "../libthoro/hash/sha1/FileSource.hpp"
-#include "../libthoro/hash/sha1/FileSourceUtility.hpp"
+#include "../libstriezel/filesystem/file.hpp"
+#include "../libstriezel/hash/sha512/sha512.hpp"
+#include "../libstriezel/hash/sha512/FileSource.hpp"
+#include "../libstriezel/hash/sha512/FileSourceUtility.hpp"
+#include "../libstriezel/hash/sha384/sha384.hpp"
+#include "../libstriezel/hash/sha384/FileSource.hpp"
+#include "../libstriezel/hash/sha384/FileSourceUtility.hpp"
+#include "../libstriezel/hash/sha256/sha256.hpp"
+#include "../libstriezel/hash/sha256/FileSource.hpp"
+#include "../libstriezel/hash/sha256/FileSourceUtility.hpp"
+#include "../libstriezel/hash/sha224/sha224.hpp"
+#include "../libstriezel/hash/sha224/FileSource.hpp"
+#include "../libstriezel/hash/sha224/FileSourceUtility.hpp"
+#include "../libstriezel/hash/sha1/sha1.hpp"
+#include "../libstriezel/hash/sha1/FileSource.hpp"
+#include "../libstriezel/hash/sha1/FileSourceUtility.hpp"
 
 //return codes
 const int rcInvalidParameter = 1;
@@ -193,7 +193,7 @@ int main(int argc, char **argv)
         else
         {
           //should be filename
-          if (libthoro::filesystem::File::exists(param))
+          if (libstriezel::filesystem::file::exists(param))
           {
             //add file to list
             files.insert(param);

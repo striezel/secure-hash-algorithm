@@ -24,8 +24,8 @@
 #include <string>
 #include <tuple>
 #include <vector>
-#include "../../../libthoro/hash/sha512/sha512.hpp"
-#include "../../../libthoro/hash/sha512/BufferSourceUtility.hpp"
+#include "../../../libstriezel/hash/sha512/sha512.hpp"
+#include "../../../libstriezel/hash/sha512/BufferSourceUtility.hpp"
 
 /*
   The following example test messages and digests are take from

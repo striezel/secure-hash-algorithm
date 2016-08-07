@@ -23,8 +23,8 @@
 #include <string>
 #include <tuple>
 #include <vector>
-#include "../../../libthoro/hash/sha384/sha384.hpp"
-#include "../../../libthoro/hash/sha384/BufferSourceUtility.hpp"
+#include "../../../libstriezel/hash/sha384/sha384.hpp"
+#include "../../../libstriezel/hash/sha384/BufferSourceUtility.hpp"
 
 /*
   The following example test messages and digests are take from

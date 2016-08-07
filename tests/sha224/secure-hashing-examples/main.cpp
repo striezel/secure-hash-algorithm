@@ -22,9 +22,9 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include "../../../libthoro/hash/sha224/sha224.hpp"
-#include "../../../libthoro/hash/sha224/BufferSource.hpp"
-#include "../../../libthoro/hash/sha224/BufferSourceUtility.hpp"
+#include "../../../libstriezel/hash/sha224/sha224.hpp"
+#include "../../../libstriezel/hash/sha224/BufferSource.hpp"
+#include "../../../libstriezel/hash/sha224/BufferSourceUtility.hpp"
 
 /*
   The following example test messages and digests are take from

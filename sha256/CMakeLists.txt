@@ -3,25 +3,26 @@ cmake_minimum_required (VERSION 2.8)
 
 project(sha256)
 
-# add_definitions(-DDefNameHere)
+# enable C++11 support
+add_definitions(-std=c++0x)
 
 set(sha256_sources
-    ../libthoro/common/StringUtils.cpp
-    ../libthoro/filesystem/FileFunctions.cpp
-    ../libthoro/hash/sha1/FileSourceUtility.cpp
-    ../libthoro/hash/sha1/sha1.cpp
-    ../libthoro/hash/sha224/FileSourceUtility.cpp
-    ../libthoro/hash/sha224/sha224.cpp
-    ../libthoro/hash/sha256/sha256.cpp
-    ../libthoro/hash/sha256/FileSource.cpp
-    ../libthoro/hash/sha256/FileSourceUtility.cpp
-    ../libthoro/hash/sha256/MessageSource.cpp
-    ../libthoro/hash/sha384/FileSourceUtility.cpp
-    ../libthoro/hash/sha384/sha384.cpp
-    ../libthoro/hash/sha512/FileSource.cpp
-    ../libthoro/hash/sha512/FileSourceUtility.cpp
-    ../libthoro/hash/sha512/MessageSource.cpp
-    ../libthoro/hash/sha512/sha512.cpp
+    ../libstriezel/common/StringUtils.cpp
+    ../libstriezel/filesystem/file.cpp
+    ../libstriezel/hash/sha1/FileSourceUtility.cpp
+    ../libstriezel/hash/sha1/sha1.cpp
+    ../libstriezel/hash/sha224/FileSourceUtility.cpp
+    ../libstriezel/hash/sha224/sha224.cpp
+    ../libstriezel/hash/sha256/sha256.cpp
+    ../libstriezel/hash/sha256/FileSource.cpp
+    ../libstriezel/hash/sha256/FileSourceUtility.cpp
+    ../libstriezel/hash/sha256/MessageSource.cpp
+    ../libstriezel/hash/sha384/FileSourceUtility.cpp
+    ../libstriezel/hash/sha384/sha384.cpp
+    ../libstriezel/hash/sha512/FileSource.cpp
+    ../libstriezel/hash/sha512/FileSourceUtility.cpp
+    ../libstriezel/hash/sha512/MessageSource.cpp
+    ../libstriezel/hash/sha512/sha512.cpp
     main.cpp)
 
 if (CMAKE_COMPILER_IS_GNUCC)

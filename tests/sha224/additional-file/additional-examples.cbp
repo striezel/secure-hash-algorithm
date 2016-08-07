@@ -24,22 +24,22 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../../../libthoro/common/StringUtils.cpp" />
-		<Unit filename="../../../libthoro/common/StringUtils.h" />
-		<Unit filename="../../../libthoro/filesystem/DirectoryFunctions.cpp" />
-		<Unit filename="../../../libthoro/filesystem/DirectoryFunctions.hpp" />
-		<Unit filename="../../../libthoro/filesystem/FileFunctions.cpp" />
-		<Unit filename="../../../libthoro/filesystem/FileFunctions.hpp" />
-		<Unit filename="../../../libthoro/hash/sha-1-256_functions.hpp" />
-		<Unit filename="../../../libthoro/hash/sha224/FileSource.hpp" />
-		<Unit filename="../../../libthoro/hash/sha224/FileSourceUtility.cpp" />
-		<Unit filename="../../../libthoro/hash/sha224/FileSourceUtility.hpp" />
-		<Unit filename="../../../libthoro/hash/sha224/sha224.cpp" />
-		<Unit filename="../../../libthoro/hash/sha224/sha224.hpp" />
-		<Unit filename="../../../libthoro/hash/sha256/FileSource.cpp" />
-		<Unit filename="../../../libthoro/hash/sha256/FileSource.hpp" />
-		<Unit filename="../../../libthoro/hash/sha256/MessageSource.cpp" />
-		<Unit filename="../../../libthoro/hash/sha256/MessageSource.hpp" />
+		<Unit filename="../../../libstriezel/common/StringUtils.cpp" />
+		<Unit filename="../../../libstriezel/common/StringUtils.h" />
+		<Unit filename="../../../libstriezel/filesystem/directory.cpp" />
+		<Unit filename="../../../libstriezel/filesystem/directory.hpp" />
+		<Unit filename="../../../libstriezel/filesystem/file.cpp" />
+		<Unit filename="../../../libstriezel/filesystem/file.hpp" />
+		<Unit filename="../../../libstriezel/hash/sha-1-256_functions.hpp" />
+		<Unit filename="../../../libstriezel/hash/sha224/FileSource.hpp" />
+		<Unit filename="../../../libstriezel/hash/sha224/FileSourceUtility.cpp" />
+		<Unit filename="../../../libstriezel/hash/sha224/FileSourceUtility.hpp" />
+		<Unit filename="../../../libstriezel/hash/sha224/sha224.cpp" />
+		<Unit filename="../../../libstriezel/hash/sha224/sha224.hpp" />
+		<Unit filename="../../../libstriezel/hash/sha256/FileSource.cpp" />
+		<Unit filename="../../../libstriezel/hash/sha256/FileSource.hpp" />
+		<Unit filename="../../../libstriezel/hash/sha256/MessageSource.cpp" />
+		<Unit filename="../../../libstriezel/hash/sha256/MessageSource.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

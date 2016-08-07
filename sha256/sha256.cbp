@@ -30,47 +30,48 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-std=c++11" />
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../libthoro/common/StringUtils.cpp" />
-		<Unit filename="../libthoro/common/StringUtils.h" />
-		<Unit filename="../libthoro/filesystem/FileFunctions.cpp" />
-		<Unit filename="../libthoro/filesystem/FileFunctions.hpp" />
-		<Unit filename="../libthoro/hash/sha-1-256_functions.hpp" />
-		<Unit filename="../libthoro/hash/sha1/FileSource.hpp" />
-		<Unit filename="../libthoro/hash/sha1/FileSourceUtility.cpp" />
-		<Unit filename="../libthoro/hash/sha1/FileSourceUtility.hpp" />
-		<Unit filename="../libthoro/hash/sha1/sha1.cpp" />
-		<Unit filename="../libthoro/hash/sha1/sha1.hpp" />
-		<Unit filename="../libthoro/hash/sha224/FileSource.hpp" />
-		<Unit filename="../libthoro/hash/sha224/FileSourceUtility.cpp" />
-		<Unit filename="../libthoro/hash/sha224/FileSourceUtility.hpp" />
-		<Unit filename="../libthoro/hash/sha224/sha224.cpp" />
-		<Unit filename="../libthoro/hash/sha224/sha224.hpp" />
-		<Unit filename="../libthoro/hash/sha256/FileSource.cpp" />
-		<Unit filename="../libthoro/hash/sha256/FileSource.hpp" />
-		<Unit filename="../libthoro/hash/sha256/FileSourceUtility.cpp" />
-		<Unit filename="../libthoro/hash/sha256/FileSourceUtility.hpp" />
-		<Unit filename="../libthoro/hash/sha256/MessageSource.cpp" />
-		<Unit filename="../libthoro/hash/sha256/MessageSource.hpp" />
-		<Unit filename="../libthoro/hash/sha256/functions.hpp" />
-		<Unit filename="../libthoro/hash/sha256/sha256.cpp" />
-		<Unit filename="../libthoro/hash/sha256/sha256.hpp" />
-		<Unit filename="../libthoro/hash/sha384/FileSource.hpp" />
-		<Unit filename="../libthoro/hash/sha384/FileSourceUtility.cpp" />
-		<Unit filename="../libthoro/hash/sha384/FileSourceUtility.hpp" />
-		<Unit filename="../libthoro/hash/sha384/sha384.cpp" />
-		<Unit filename="../libthoro/hash/sha384/sha384.hpp" />
-		<Unit filename="../libthoro/hash/sha512/FileSource.cpp" />
-		<Unit filename="../libthoro/hash/sha512/FileSource.hpp" />
-		<Unit filename="../libthoro/hash/sha512/FileSourceUtility.cpp" />
-		<Unit filename="../libthoro/hash/sha512/FileSourceUtility.hpp" />
-		<Unit filename="../libthoro/hash/sha512/MessageSource.cpp" />
-		<Unit filename="../libthoro/hash/sha512/MessageSource.hpp" />
-		<Unit filename="../libthoro/hash/sha512/functions.hpp" />
-		<Unit filename="../libthoro/hash/sha512/sha512.cpp" />
-		<Unit filename="../libthoro/hash/sha512/sha512.hpp" />
+		<Unit filename="../libstriezel/common/StringUtils.cpp" />
+		<Unit filename="../libstriezel/common/StringUtils.h" />
+		<Unit filename="../libstriezel/filesystem/file.cpp" />
+		<Unit filename="../libstriezel/filesystem/file.hpp" />
+		<Unit filename="../libstriezel/hash/sha-1-256_functions.hpp" />
+		<Unit filename="../libstriezel/hash/sha1/FileSource.hpp" />
+		<Unit filename="../libstriezel/hash/sha1/FileSourceUtility.cpp" />
+		<Unit filename="../libstriezel/hash/sha1/FileSourceUtility.hpp" />
+		<Unit filename="../libstriezel/hash/sha1/sha1.cpp" />
+		<Unit filename="../libstriezel/hash/sha1/sha1.hpp" />
+		<Unit filename="../libstriezel/hash/sha224/FileSource.hpp" />
+		<Unit filename="../libstriezel/hash/sha224/FileSourceUtility.cpp" />
+		<Unit filename="../libstriezel/hash/sha224/FileSourceUtility.hpp" />
+		<Unit filename="../libstriezel/hash/sha224/sha224.cpp" />
+		<Unit filename="../libstriezel/hash/sha224/sha224.hpp" />
+		<Unit filename="../libstriezel/hash/sha256/FileSource.cpp" />
+		<Unit filename="../libstriezel/hash/sha256/FileSource.hpp" />
+		<Unit filename="../libstriezel/hash/sha256/FileSourceUtility.cpp" />
+		<Unit filename="../libstriezel/hash/sha256/FileSourceUtility.hpp" />
+		<Unit filename="../libstriezel/hash/sha256/MessageSource.cpp" />
+		<Unit filename="../libstriezel/hash/sha256/MessageSource.hpp" />
+		<Unit filename="../libstriezel/hash/sha256/functions.hpp" />
+		<Unit filename="../libstriezel/hash/sha256/sha256.cpp" />
+		<Unit filename="../libstriezel/hash/sha256/sha256.hpp" />
+		<Unit filename="../libstriezel/hash/sha384/FileSource.hpp" />
+		<Unit filename="../libstriezel/hash/sha384/FileSourceUtility.cpp" />
+		<Unit filename="../libstriezel/hash/sha384/FileSourceUtility.hpp" />
+		<Unit filename="../libstriezel/hash/sha384/sha384.cpp" />
+		<Unit filename="../libstriezel/hash/sha384/sha384.hpp" />
+		<Unit filename="../libstriezel/hash/sha512/FileSource.cpp" />
+		<Unit filename="../libstriezel/hash/sha512/FileSource.hpp" />
+		<Unit filename="../libstriezel/hash/sha512/FileSourceUtility.cpp" />
+		<Unit filename="../libstriezel/hash/sha512/FileSourceUtility.hpp" />
+		<Unit filename="../libstriezel/hash/sha512/MessageSource.cpp" />
+		<Unit filename="../libstriezel/hash/sha512/MessageSource.hpp" />
+		<Unit filename="../libstriezel/hash/sha512/functions.hpp" />
+		<Unit filename="../libstriezel/hash/sha512/sha512.cpp" />
+		<Unit filename="../libstriezel/hash/sha512/sha512.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

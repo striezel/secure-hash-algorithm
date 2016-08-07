@@ -5,10 +5,10 @@ cmake_minimum_required (VERSION 2.8)
 project(test_simple_sha384)
 
 set(test_simple_sha384_src
-    ../../../libthoro/hash/sha384/BufferSourceUtility.cpp
-    ../../../libthoro/hash/sha512/BufferSource.cpp
-    ../../../libthoro/hash/sha512/MessageSource.cpp
-    ../../../libthoro/hash/sha384/sha384.cpp
+    ../../../libstriezel/hash/sha384/BufferSourceUtility.cpp
+    ../../../libstriezel/hash/sha512/BufferSource.cpp
+    ../../../libstriezel/hash/sha512/MessageSource.cpp
+    ../../../libstriezel/hash/sha384/sha384.cpp
     main.cpp)
 
 # We use a C++11 feature in the code, so enable C++0x a.k.a. C++11.

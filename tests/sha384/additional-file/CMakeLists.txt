@@ -5,12 +5,12 @@ cmake_minimum_required (VERSION 2.8)
 project(test_additional_sha384)
 
 set(test_additional_sha384_src
-    ../../../libthoro/common/StringUtils.cpp
-    ../../../libthoro/filesystem/FileFunctions.cpp
-    ../../../libthoro/hash/sha384/FileSourceUtility.cpp
-    ../../../libthoro/hash/sha384/sha384.cpp
-    ../../../libthoro/hash/sha512/FileSource.cpp
-    ../../../libthoro/hash/sha512/MessageSource.cpp
+    ../../../libstriezel/common/StringUtils.cpp
+    ../../../libstriezel/filesystem/file.cpp
+    ../../../libstriezel/hash/sha384/FileSourceUtility.cpp
+    ../../../libstriezel/hash/sha384/sha384.cpp
+    ../../../libstriezel/hash/sha512/FileSource.cpp
+    ../../../libstriezel/hash/sha512/MessageSource.cpp
     main.cpp)
 
 # We use a C++11 feature in the code, so enable C++0x a.k.a. C++11.

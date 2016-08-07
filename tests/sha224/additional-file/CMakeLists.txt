@@ -5,13 +5,13 @@ cmake_minimum_required (VERSION 2.8)
 project(test_additional_sha224)
 
 set(test_additional_sha224_src
-    ../../../libthoro/common/StringUtils.cpp
-    ../../../libthoro/filesystem/DirectoryFunctions.cpp
-    ../../../libthoro/filesystem/FileFunctions.cpp
-    ../../../libthoro/hash/sha224/FileSourceUtility.cpp
-    ../../../libthoro/hash/sha224/sha224.cpp
-    ../../../libthoro/hash/sha256/FileSource.cpp
-    ../../../libthoro/hash/sha256/MessageSource.cpp
+    ../../../libstriezel/common/StringUtils.cpp
+    ../../../libstriezel/filesystem/directory.cpp
+    ../../../libstriezel/filesystem/file.cpp
+    ../../../libstriezel/hash/sha224/FileSourceUtility.cpp
+    ../../../libstriezel/hash/sha224/sha224.cpp
+    ../../../libstriezel/hash/sha256/FileSource.cpp
+    ../../../libstriezel/hash/sha256/MessageSource.cpp
     main.cpp)
 
 # We use a C++11 feature in the code, so enable C++0x a.k.a. C++11.

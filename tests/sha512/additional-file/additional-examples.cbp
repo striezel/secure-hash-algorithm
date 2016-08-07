@@ -24,18 +24,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../../../libthoro/common/StringUtils.cpp" />
-		<Unit filename="../../../libthoro/common/StringUtils.h" />
-		<Unit filename="../../../libthoro/filesystem/FileFunctions.cpp" />
-		<Unit filename="../../../libthoro/filesystem/FileFunctions.hpp" />
-		<Unit filename="../../../libthoro/hash/sha512/FileSource.cpp" />
-		<Unit filename="../../../libthoro/hash/sha512/FileSource.hpp" />
-		<Unit filename="../../../libthoro/hash/sha512/FileSourceUtility.cpp" />
-		<Unit filename="../../../libthoro/hash/sha512/FileSourceUtility.hpp" />
-		<Unit filename="../../../libthoro/hash/sha512/MessageSource.cpp" />
-		<Unit filename="../../../libthoro/hash/sha512/MessageSource.hpp" />
-		<Unit filename="../../../libthoro/hash/sha512/sha512.cpp" />
-		<Unit filename="../../../libthoro/hash/sha512/sha512.hpp" />
+		<Unit filename="../../../libstriezel/common/StringUtils.cpp" />
+		<Unit filename="../../../libstriezel/common/StringUtils.h" />
+		<Unit filename="../../../libstriezel/filesystem/file.cpp" />
+		<Unit filename="../../../libstriezel/filesystem/file.hpp" />
+		<Unit filename="../../../libstriezel/hash/sha512/FileSource.cpp" />
+		<Unit filename="../../../libstriezel/hash/sha512/FileSource.hpp" />
+		<Unit filename="../../../libstriezel/hash/sha512/FileSourceUtility.cpp" />
+		<Unit filename="../../../libstriezel/hash/sha512/FileSourceUtility.hpp" />
+		<Unit filename="../../../libstriezel/hash/sha512/MessageSource.cpp" />
+		<Unit filename="../../../libstriezel/hash/sha512/MessageSource.hpp" />
+		<Unit filename="../../../libstriezel/hash/sha512/sha512.cpp" />
+		<Unit filename="../../../libstriezel/hash/sha512/sha512.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
