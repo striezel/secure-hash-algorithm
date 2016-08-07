@@ -1,6 +1,6 @@
 #sha256 - calculate SHA-256 message digest
 
-[![Build Status](https://travis-ci.org/Thoronador/secure-hash-algorithm.svg)](https://travis-ci.org/Thoronador/secure-hash-algorithm)
+[![Build Status](https://travis-ci.org/striezel/secure-hash-algorithm.svg)](https://travis-ci.org/striezel/secure-hash-algorithm)
 
 ##Purpose of the program
 
@@ -78,7 +78,7 @@ into a root terminal.
 Get the source directly from Git by cloning the Git repository and change to
 the directory after the repository is completely cloned:
 
-    git clone https://github.com/Thoronador/secure-hash-algorithm.git ./sha256
+    git clone https://github.com/striezel/secure-hash-algorithm.git ./sha256
     cd sha256
     git submodule update --init --recursive
 
@@ -111,4 +111,4 @@ Public License for more details.
 
 The program's source code is published at GitHub.com, the
 project itself is located at
-  <https://github.com/Thoronador/secure-hash-algorithm>
+  <https://github.com/striezel/secure-hash-algorithm>

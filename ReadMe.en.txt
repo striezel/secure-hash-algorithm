@@ -1,6 +1,6 @@
 ======================================================================
                sha256 - calculate SHA-256 message digest
-                            (by Thoronador)
+                            (by Dirk Stolle)
 ======================================================================
 
 
@@ -78,4 +78,4 @@ Public License for more details.
 
 The program's source code is published at GitHub.com, the
 project itself is located at
-  <https://github.com/Thoronador/secure-hash-algorithm>
+  <https://github.com/striezel/secure-hash-algorithm>

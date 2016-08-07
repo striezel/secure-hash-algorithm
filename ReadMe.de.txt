@@ -1,17 +1,17 @@
 ======================================================================
-                sha256 - SHA-256-PrÃ¼fsummen berechnen
-                           (von Thoronador)
+                sha256 - SHA-256-Prüfsummen berechnen
+                           (von Dirk Stolle)
 ======================================================================
 
 
 Zweck des Programmes:
 =====================
 
-Das Programm sha256 soll dazu dienen, SHA-256-PrÃ¼fsummen (256bit) zu
-allen Dateien, die dem Programm als Befehlszeilenparameter Ã¼bergeben
+Das Programm sha256 soll dazu dienen, SHA-256-Prüfsummen (256bit) zu
+allen Dateien, die dem Programm als Befehlszeilenparameter übergeben
 werden, zu berechnen und auszugeben.
-Seit Version 1.1 kann man alternativ auch SHA-1-PrÃ¼fsummen (160bit)
-berechnen lassen, falls dies gewÃ¼nscht wird.
+Seit Version 1.1 kann man alternativ auch SHA-1-Prüfsummen (160bit)
+berechnen lassen, falls dies gewünscht wird.
 
 
 Programmaufruf:
@@ -22,7 +22,7 @@ via Kommandozeile/ Shell aufrufen. Eine Liste der erlaubten Parameter
 folgt.
 
 
-Ãœbersicht:
+Übersicht:
 ----------
 
   sha256 [--sha1 | --sha224 | --sha256 | --sha384 | --sha512] DATEINAME ...
@@ -88,4 +88,4 @@ Public License 3).
 
 Der Quellcode des Programms lässt sich auf GitHub.com einsehen,
 das Projekt findet sich unter
-  https://github.com/Thoronador/secure-hash-algorithm
+  https://github.com/striezel/secure-hash-algorithm
