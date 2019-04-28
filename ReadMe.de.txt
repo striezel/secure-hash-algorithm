@@ -86,6 +86,6 @@ für Verwendbarkeit für einen bestimmten Zweck, Mängelfreiheit und
 Richtigkeit (siehe dazu die entsprechenden Abschnitte der GNU General
 Public License 3).
 
-Der Quellcode des Programms lässt sich auf GitHub.com einsehen,
+Der Quellcode des Programms lässt sich auf GitLab.com einsehen,
 das Projekt findet sich unter
-  https://github.com/striezel/secure-hash-algorithm
+  https://gitlab.com/striezel/secure-hash-algorithm

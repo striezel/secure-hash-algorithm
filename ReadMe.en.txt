@@ -76,6 +76,6 @@ WITHOUT ANY WARRANTY; without even the implied warranty of MERCHAN-
 TABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
 Public License for more details.
 
-The program's source code is published at GitHub.com, the
+The program's source code is published at GitLab.com, the
 project itself is located at
-  <https://github.com/striezel/secure-hash-algorithm>
+  <https://gitlab.com/striezel/secure-hash-algorithm>

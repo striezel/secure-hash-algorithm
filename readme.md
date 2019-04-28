@@ -1,8 +1,8 @@
-#sha256 - calculate SHA-256 message digest
+# sha256 - calculate SHA-256 message digest
 
 [![Build Status](https://travis-ci.org/striezel/secure-hash-algorithm.svg)](https://travis-ci.org/striezel/secure-hash-algorithm)
 
-##Purpose of the program
+## Purpose of the program
 
 The sha256 program calculates and prints SHA-256 (256bit) checksums
 of all files that are passed to it as command line parameters.
@@ -78,7 +78,7 @@ into a root terminal.
 Get the source directly from Git by cloning the Git repository and change to
 the directory after the repository is completely cloned:
 
-    git clone https://github.com/striezel/secure-hash-algorithm.git ./sha256
+    git clone https://gitlab.com/striezel/secure-hash-algorithm.git ./sha256
     cd sha256
     git submodule update --init --recursive
 
@@ -97,7 +97,9 @@ Starting in the root directory of the source, you can do the following steps:
 
 Now the sha256 binary is built and ready for use.
 
-##License, disclaimer and source code
+## License, disclaimer and source code
+
+Copyright 2015  Dirk Stolle
 
 The program sha256 is released under the GNU General Public License
 version 3, a free software license. For the full text of the license
@@ -109,6 +111,6 @@ WITHOUT ANY WARRANTY; without even the implied warranty of MERCHAN-
 TABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
 Public License for more details.
 
-The program's source code is published at GitHub.com, the
+The program's source code is published at GitLab.com, the
 project itself is located at
-  <https://github.com/striezel/secure-hash-algorithm>
+  <https://gitlab.com/striezel/secure-hash-algorithm>
