@@ -1,6 +1,7 @@
 # sha256 - calculate SHA-256 message digest
 
-[![Build Status](https://travis-ci.org/striezel/secure-hash-algorithm.svg)](https://travis-ci.org/striezel/secure-hash-algorithm)
+[![GitHub CI status](https://github.com/striezel/secure-hash-algorithm/workflows/GitHub%20CI/badge.svg)](https://github.com/striezel/secure-hash-algorithm/actions)
+[![GitLab pipeline status](https://gitlab.com/striezel/secure-hash-algorithm/badges/master/pipeline.svg)](https://gitlab.com/striezel/secure-hash-algorithm/-/pipelines)
 
 ## Purpose of the program
 
