@@ -1,0 +1,40 @@
+image: debian:11-slim
+
+variables:
+  GIT_SUBMODULE_STRATEGY: "recursive"
+
+# Build with GCC / G++.
+build_gcc:
+  stage: build
+  before_script:
+    - apt-get update && apt-get -y install catch cmake g++ libxml2-dev pkg-config
+    - export CC=gcc && export CXX=g++
+  script:
+# Linting script also lints a lot of unrelated stuff (GUIs, archives, etc.)
+# which would require a lot of more dependendencies (png, jpeg, freeglut, ...)
+# that just blow up the number of installed packages, so no linting is done here
+# for the moment. This may (or may not) change in the future.
+#    - ./ci/cpplint.sh
+    - mkdir ./build
+    - cd ./build
+    - cmake ../
+    - make -j4
+    - ctest -V
+
+# Build with Clang / Clang++.
+build_clang:
+  stage: build
+  before_script:
+    - apt-get update && apt-get -y install catch clang cmake libxml2-dev pkg-config
+    - export CC=clang && export CXX=clang++
+  script:
+# Linting script also lints a lot of unrelated stuff (GUIs, archives, etc.)
+# which would require a lot of more dependendencies (png, jpeg, freeglut, ...)
+# that just blow up the number of installed packages, so no linting is done here
+# for the moment. This may (or may not) change in the future.
+#    - ./ci/cpplint.sh
+    - mkdir ./build
+    - cd ./build
+    - cmake ../
+    - make -j4
+    - ctest -V
