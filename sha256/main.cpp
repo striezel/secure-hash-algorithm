@@ -1,7 +1,7 @@
 /*
  -------------------------------------------------------------------------------
     This file is part of the SHA-256 hash calculator.
-    Copyright (C) 2012, 2015, 2016  Dirk Stolle
+    Copyright (C) 2012, 2015, 2016, 2022  Dirk Stolle
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@ const int rcInvalidParameter = 1;
 void showGPLNotice()
 {
   std::cout << "SHA-256 file hash calculator\n"
-            << "  Copyright (C) 2012, 2015  Dirk Stolle\n"
+            << "  Copyright (C) 2012, 2015, 2022  Dirk Stolle\n"
             << "\n"
             << "  This program is free software: you can redistribute it and/or\n"
             << "  modify it under the terms of the GNU General Public License as published\n"
@@ -82,7 +82,7 @@ void showHelp()
             << "  --sha224         - use SHA-224 instead of SHA-256 to hash files.\n"
             << "  --sha256         - use SHA-256 to hash files. This option is active by\n"
             << "                     default.\n"
-            << "  --sha384         - use SHA-384 instead of SHA-384 to hash files.\n"
+            << "  --sha384         - use SHA-384 instead of SHA-256 to hash files.\n"
             << "  --sha512         - use SHA-512 instead of SHA-256 to hash files.\n";
 }
 

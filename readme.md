@@ -26,19 +26,19 @@ via command line/ shell. A list of valid options follows below.
 ### Options + parameters
 
   --sha1
-      Calculate SHA-1 (160bit) checksums instead of SHA-256.
+      Calculate SHA-1 (160 bit) checksums instead of SHA-256.
 
   --sha224
-      Calculate SHA-224 (224bit) checksums instead of SHA-256.
+      Calculate SHA-224 (224 bit) checksums instead of SHA-256.
 
   --sha256
-      Calculate SHA-256 (256bit) checksums. This is the default.
+      Calculate SHA-256 (256 bit) checksums. This is the default.
 
   --sha384
-      Calculate SHA-384 (384bit) checksums instead of SHA-384.
+      Calculate SHA-384 (384 bit) checksums instead of SHA-256.
 
   --sha512
-      Calculate SHA-512 (512bit) checksums instead of SHA-256.
+      Calculate SHA-512 (512 bit) checksums instead of SHA-256.
 
   --help
       Show a help message and list valid program options.
