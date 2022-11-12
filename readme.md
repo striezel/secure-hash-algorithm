@@ -1,6 +1,7 @@
 # sha256 - calculate SHA-256 message digest
 
-[![GitHub CI status](https://github.com/striezel/secure-hash-algorithm/workflows/GitHub%20CI/badge.svg)](https://github.com/striezel/secure-hash-algorithm/actions)
+[![GitHub GCC status](https://github.com/striezel/secure-hash-algorithm/workflows/GCC/badge.svg)](https://github.com/striezel/secure-hash-algorithm/actions)
+[![GitHub Clang status](https://github.com/striezel/secure-hash-algorithm/workflows/Clang/badge.svg)](https://github.com/striezel/secure-hash-algorithm/actions)
 [![GitLab pipeline status](https://gitlab.com/striezel/secure-hash-algorithm/badges/master/pipeline.svg)](https://gitlab.com/striezel/secure-hash-algorithm/-/pipelines)
 
 ## Purpose of the program
