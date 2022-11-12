@@ -1,5 +1,4 @@
-# We might support earlier versions, too, but it's only tested with 2.8.9.
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required (VERSION 3.8)
 
 # binary for additional SHA-256 tests
 project(test_additional_buffer_sha256)
@@ -11,10 +10,14 @@ set(test_additional_buffer_sha256_src
     ../../../libstriezel/hash/sha256/sha256.cpp
     main.cpp)
 
-# We use a C++11 feature in the code, so enable C++0x a.k.a. C++11.
-add_definitions(-Wall -O2 -fexceptions -std=c++0x)
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    add_definitions(-Wall -O2 -fexceptions)
 
-set( CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -s" )
+    set( CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -s" )
+endif ()
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(test_additional_buffer_sha256 ${test_additional_buffer_sha256_src})
 

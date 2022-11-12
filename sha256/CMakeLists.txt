@@ -1,10 +1,7 @@
-# We might support earlier versions, too, but it's only tested with 2.8.9.
-cmake_minimum_required (VERSION 2.8)
+# We might support earlier versions, too, but try to use a recent version.
+cmake_minimum_required (VERSION 3.8)
 
 project(sha256)
-
-# enable C++11 support
-add_definitions(-std=c++0x)
 
 set(sha256_sources
     ../libstriezel/common/StringUtils.cpp
@@ -25,10 +22,14 @@ set(sha256_sources
     ../libstriezel/hash/sha512/sha512.cpp
     main.cpp)
 
-if (CMAKE_COMPILER_IS_GNUCC)
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     add_definitions (-Wall -O3 -fexceptions)
-endif (CMAKE_COMPILER_IS_GNUCC)
 
-set( CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -s" )
+    set( CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -s" )
+endif ()
+
+# enable C++11 support
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(sha256 ${sha256_sources})

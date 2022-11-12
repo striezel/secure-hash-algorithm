@@ -1,5 +1,9 @@
 # ChangeLog for sha256
 
+## Version NEXT (2022-11-??)
+  - The minimum required CMake version to build the program is raised to
+    CMake 3.8.
+
 ## Version 1.4 (2015-08-06)
   - add option to use SHA-384 instead of SHA-256
 
