@@ -48,7 +48,7 @@ int main()
     //next statement contains a nasty typecast
     const SHA256::MessageDigest md_sha256 = SHA256::computeFromBuffer(
                 reinterpret_cast<uint8_t*>(const_cast<char*>(i.first.c_str())),
-                i.first.size()*8);
+                i.first.size() * 8);
     std::cout << "Message:" << std::endl
               << i.first << std::endl
               << "Expected digest:   " << i.second << std::endl
@@ -58,7 +58,7 @@ int main()
       std::cout << "ERROR: Message digest is not as expected!" << std::endl;
       return 1;
     }
-  } //for
+  }
   std::cout << "Passed test!" << std::endl;
   return 0;
 }

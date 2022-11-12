@@ -64,7 +64,7 @@ void showGPLNotice()
 void showVersion()
 {
   showGPLNotice();
-  std::cout << "SHA-256 file hash calculator, version 1.4, 2015-08-06\n";
+  std::cout << "SHA-256 file hash calculator, version 1.5, 2022-11-12\n";
 }
 
 void showHelp()
@@ -72,18 +72,18 @@ void showHelp()
   std::cout << "\nsha256 [--sha1 | --sha224 | --sha256 | --sha384 | --sha512] FILENAME\n"
             << "\n"
             << "options:\n"
-            << "  --help           - displays this help message and quits\n"
+            << "  --help           - Displays this help message and quits.\n"
             << "  -?               - same as --help\n"
-            << "  --version        - displays the version of the program and quits\n"
+            << "  --version        - Displays the version of the program and quits.\n"
             << "  -v               - same as --version\n"
-            << "  FILENAME         - set path to file that should be hashed. Can be repeated\n"
+            << "  FILENAME         - Set path to file that should be hashed. Can be repeated\n"
             << "                     multiple times. Has to appear at least once.\n"
-            << "  --sha1           - use SHA-1 instead of SHA-256 to hash files.\n"
-            << "  --sha224         - use SHA-224 instead of SHA-256 to hash files.\n"
-            << "  --sha256         - use SHA-256 to hash files. This option is active by\n"
+            << "  --sha1           - Use SHA-1 instead of SHA-256 to hash files.\n"
+            << "  --sha224         - Use SHA-224 instead of SHA-256 to hash files.\n"
+            << "  --sha256         - Use SHA-256 to hash files. This option is active by\n"
             << "                     default.\n"
-            << "  --sha384         - use SHA-384 instead of SHA-256 to hash files.\n"
-            << "  --sha512         - use SHA-512 instead of SHA-256 to hash files.\n";
+            << "  --sha384         - Use SHA-384 instead of SHA-256 to hash files.\n"
+            << "  --sha512         - Use SHA-512 instead of SHA-256 to hash files.\n";
 }
 
 int main(int argc, char **argv)
@@ -94,180 +94,178 @@ int main(int argc, char **argv)
 
   SHAHashType hashType = htUnspecified;
 
-  if ((argc>1) and (argv!=NULL))
+  if ((argc > 1) && (argv != nullptr))
   {
-    int i=1;
-    while (i<argc)
+    int i = 1;
+    while (i < argc)
     {
-      if (argv[i]!=NULL)
+      if (argv[i] != nullptr)
       {
         const std::string param = std::string(argv[i]);
-        //help parameter
-        if ((param=="--help") or (param=="-?") or (param=="/?"))
+        // help parameter
+        if ((param == "--help") || (param == "-?") || (param == "/?"))
         {
           showHelp();
           return 0;
-        }//if help wanted
-        //version information requested?
-        else if ((param=="--version") or (param=="-v"))
+        }
+        // version information requested?
+        else if ((param == "--version") || (param == "-v"))
         {
           showVersion();
           return 0;
-        }//version
-        else if ((param=="--sha1") or (param=="--sha-1") or (param=="--sha160")
-              or (param=="--sha-160"))
+        }
+        else if ((param == "--sha1") || (param == "--sha-1") || (param == "--sha160")
+              || (param == "--sha-160"))
         {
-          if (hashType==htSHA1)
+          if (hashType == htSHA1)
           {
-            std::cout << "Error: parameter "<<param<<" must not occur more than once!\n";
+            std::cerr << "Error: Parameter " << param << " must not occur more than once!\n";
             return rcInvalidParameter;
           }
-          if (hashType!=htUnspecified)
+          if (hashType != htUnspecified)
           {
-            std::cout << "Error: parameter "<<param<<" must not occur after "
-                      << "hash type has already been set!\n";
+            std::cerr << "Error: Parameter " << param << " must not occur "
+                      << "after hash type has already been set!\n";
             return rcInvalidParameter;
           }
           hashType = htSHA1;
-        }//sha-1
-        else if ((param=="--sha224") or (param=="--sha-224"))
+        } // sha-1
+        else if ((param == "--sha224") || (param == "--sha-224"))
         {
-          if (hashType==htSHA224)
+          if (hashType == htSHA224)
           {
-            std::cout << "Error: parameter " << param << " must not occur more than once!\n";
+            std::cerr << "Error: Parameter " << param << " must not occur more than once!\n";
             return rcInvalidParameter;
           }
-          if (hashType!=htUnspecified)
+          if (hashType != htUnspecified)
           {
-            std::cout << "Error: parameter " << param << " must not occur "
+            std::cerr << "Error: Parameter " << param << " must not occur "
                       << "after hash type has already been set!\n";
             return rcInvalidParameter;
           }
           hashType = htSHA224;
-        }//sha-224
-        else if ((param=="--sha256") or (param=="--sha-256"))
+        } // sha-224
+        else if ((param == "--sha256") || (param == "--sha-256"))
         {
-          if (hashType==htSHA256)
+          if (hashType == htSHA256)
           {
-            std::cout << "Error: parameter "<<param<<" must not occur more than once!\n";
+            std::cerr << "Error: Parameter " << param << " must not occur more than once!\n";
             return rcInvalidParameter;
           }
-          if (hashType!=htUnspecified)
+          if (hashType != htUnspecified)
           {
-            std::cout << "Error: parameter "<<param<<" must not occur after "
-                      << "hash type has already been set!\n";
+            std::cerr << "Error: Parameter " << param << " must not occur "
+                      << "after hash type has already been set!\n";
             return rcInvalidParameter;
           }
           hashType = htSHA256;
-        }//sha-256
-        else if ((param=="--sha384") or (param=="--sha-384"))
+        } // sha-256
+        else if ((param == "--sha384") || (param == "--sha-384"))
         {
-          if (hashType==htSHA384)
+          if (hashType == htSHA384)
           {
-            std::cout << "Error: parameter " << param << " must not occur more than once!\n";
+            std::cerr << "Error: Parameter " << param << " must not occur more than once!\n";
             return rcInvalidParameter;
           }
-          if (hashType!=htUnspecified)
+          if (hashType != htUnspecified)
           {
-            std::cout << "Error: parameter " << param << " must not occur "
+            std::cerr << "Error: Parameter " << param << " must not occur "
                       << "after hash type has already been set!\n";
             return rcInvalidParameter;
           }
           hashType = htSHA384;
-        }//sha-384
-        else if ((param=="--sha512") or (param=="--sha-512"))
+        } // sha-384
+        else if ((param == "--sha512") || (param == "--sha-512"))
         {
-          if (hashType==htSHA512)
+          if (hashType == htSHA512)
           {
-            std::cout << "Error: parameter " << param << " must not occur more than once!\n";
+            std::cerr << "Error: Parameter " << param << " must not occur more than once!\n";
             return rcInvalidParameter;
           }
-          if (hashType!=htUnspecified)
+          if (hashType != htUnspecified)
           {
-            std::cout << "Error: parameter " << param << " must not occur "
+            std::cerr << "Error: Parameter " << param << " must not occur "
                       << "after hash type has already been set!\n";
             return rcInvalidParameter;
           }
           hashType = htSHA512;
-        }//sha-512
+        } // sha-512
         else
         {
-          //should be filename
+          // should be filename
           if (libstriezel::filesystem::file::exists(param))
           {
-            //add file to list
+            // add file to list
             files.insert(param);
           }
           else
           {
-            std::cout << "Invalid parameter/filename given: \""<<param
+            std::cerr << "Invalid parameter/filename given: \"" << param
                       << "\" does not name an existing file!\n"
                       << "Use --help to get a list of valid parameters.\n";
             return rcInvalidParameter;
           }
         }
-      }//parameter exists
+      } // parameter exists
       else
       {
-        std::cout << "Parameter at index "<<i<<" is NULL.\n";
+        std::cerr << "Parameter at index " << i << "  is NULL.\n";
         return rcInvalidParameter;
       }
-      ++i;//on to next parameter
-    }//while
-  }//if arguments present
+      ++i; // on to next parameter
+    }
+  }
   else
   {
-    std::cout << "You have to specify certain parameters for this program to run properly.\n"
+    std::cerr << "You have to specify certain parameters for this program to run properly.\n"
               << "Use --help to get a list of valid parameters.\n";
     return rcInvalidParameter;
   }
 
   if (files.empty())
   {
-    std::cout << "You have to specify certain parameters for this program to run properly.\n"
+    std::cerr << "You have to specify certain parameters for this program to run properly.\n"
               << "Use --help to get a list of valid parameters.\n";
     return rcInvalidParameter;
   }
 
   // Set default hash algorithm, if no choice was made.
-  if (hashType==htUnspecified)
+  if (hashType == htUnspecified)
     hashType = htSHA256;
 
   std::cout << "Hashing file(s), this may take a while..." << std::endl;
 
-  std::set<std::string>::const_iterator iter = files.begin();
   SHA512::MessageDigest hash512;
   SHA384::MessageDigest hash384;
   SHA256::MessageDigest hash256;
   SHA224::MessageDigest hash224;
   SHA1::MessageDigest hash160;
-  while (iter!=files.end())
+  for (const auto& item: files)
   {
     switch (hashType)
     {
       case htSHA1:
-           hash160 = SHA1::computeFromFile(*iter);
-           std::cout << hash160.toHexString() << "  " << *iter << std::endl;
+           hash160 = SHA1::computeFromFile(item);
+           std::cout << hash160.toHexString() << "  " << item << std::endl;
            break;
       case htSHA224:
-           hash224 = SHA224::computeFromFile(*iter);
-           std::cout << hash224.toHexString() << "  " << *iter << std::endl;
+           hash224 = SHA224::computeFromFile(item);
+           std::cout << hash224.toHexString() << "  " << item << std::endl;
            break;
       case htSHA384:
-           hash384 = SHA384::computeFromFile(*iter);
-           std::cout << hash384.toHexString() << "  " << *iter << std::endl;
+           hash384 = SHA384::computeFromFile(item);
+           std::cout << hash384.toHexString() << "  " << item << std::endl;
            break;
       case htSHA512:
-           hash512 = SHA512::computeFromFile(*iter);
-           std::cout << hash512.toHexString() << "  " << *iter << std::endl;
+           hash512 = SHA512::computeFromFile(item);
+           std::cout << hash512.toHexString() << "  " << item << std::endl;
            break;
       default:
-           hash256 = SHA256::computeFromFile(*iter);
-           std::cout << hash256.toHexString() << "  " << *iter << std::endl;
+           hash256 = SHA256::computeFromFile(item);
+           std::cout << hash256.toHexString() << "  " << item << std::endl;
            break;
-    }//swi
-    ++iter;
-  }//while
+    }
+  }
 
   return 0;
 }

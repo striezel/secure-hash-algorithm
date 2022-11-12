@@ -1,6 +1,6 @@
 # ChangeLog for sha256
 
-## Version NEXT (2022-11-??)
+## Version 1.5 (2022-11-12)
   - An error in the program's help text is fixed.
   - The minimum required CMake version to build the program is raised to
     CMake 3.8.
