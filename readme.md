@@ -2,6 +2,7 @@
 
 [![GitHub GCC status](https://github.com/striezel/secure-hash-algorithm/workflows/GCC/badge.svg)](https://github.com/striezel/secure-hash-algorithm/actions)
 [![GitHub Clang status](https://github.com/striezel/secure-hash-algorithm/workflows/Clang/badge.svg)](https://github.com/striezel/secure-hash-algorithm/actions)
+[![GitHub MSYS2 status](https://github.com/striezel/secure-hash-algorithm/workflows/MSYS2/badge.svg)](https://github.com/striezel/secure-hash-algorithm/actions)
 [![GitLab pipeline status](https://gitlab.com/striezel/secure-hash-algorithm/badges/master/pipeline.svg)](https://gitlab.com/striezel/secure-hash-algorithm/-/pipelines)
 
 ## Purpose of the program
