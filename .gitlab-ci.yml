@@ -1,4 +1,4 @@
-image: debian:11-slim
+image: debian:12-slim
 
 variables:
   GIT_SUBMODULE_STRATEGY: "recursive"
