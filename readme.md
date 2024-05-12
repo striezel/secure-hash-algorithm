@@ -17,14 +17,15 @@ SHA-384 (384bit) and SHA-512 (512bit) checksums, if desired.
 Since this (obviously) is a command line program, you can call it
 via command line/ shell. A list of valid options follows below.
 
-
 ### Synopsis
 
+```
   sha256 [--sha1 | --sha224 | --sha256 | --sha384 | --sha512] FILENAME ...
-
+```
 
 ### Options + parameters
 
+```
   --sha1
       Calculate SHA-1 (160 bit) checksums instead of SHA-256.
 
@@ -49,6 +50,7 @@ via command line/ shell. A list of valid options follows below.
   FILENAME
         path to a file that should be hashed. Can be repeated
         multiple times.
+```
 
 A typical call could look like:
 
@@ -67,7 +69,7 @@ CMake 3.8 or later.
 It also helps to have Git, a distributed version control system, on your build
 system to get the latest source code directly from the Git repository.
 
-All three can usually be installed be typing
+All three can usually be installed by typing
 
     apt-get install cmake g++ git
 
