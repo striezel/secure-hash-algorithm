@@ -37,3 +37,13 @@ jobs:
           export MSYSTEM=MINGW64
           cd "$GITHUB_WORKSPACE/build"
           ctest -V
+      - name: Build statically linked
+        run: |
+          export MSYSTEM=MINGW64
+          export CXX=g++
+          export CC=gcc
+          cd $GITHUB_WORKSPACE
+          mkdir build-static
+          cd build-static
+          cmake -DENABLE_LTO=ON -DENABLE_STATIC_LINKING=ON ../
+          cmake --build . -j2

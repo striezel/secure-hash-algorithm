@@ -27,6 +27,17 @@ jobs:
           cd build
           cmake ../
           make -j2
+      - name: Build statically linked with Clang ${{ matrix.version }}
+        run: |
+          export CXX=clang++-${{ matrix.version }}
+          export CC=clang-${{ matrix.version }}
+          cd $GITHUB_WORKSPACE
+          mkdir build-static
+          cd build-static
+          cmake -DENABLE_LTO=ON -DENABLE_STATIC_LINKING=ON ../
+          make -j2
+        # Only run static build on latest version in the matrix.
+        if: matrix.version == 14
       - name: Run tests
         run: |
           cd "$GITHUB_WORKSPACE/build"
