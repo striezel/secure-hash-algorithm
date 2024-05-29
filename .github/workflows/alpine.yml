@@ -1,0 +1,50 @@
+name: Alpine
+
+on: push
+
+jobs:
+  alpine:
+    runs-on: ubuntu-22.04
+    container: alpine:latest
+    steps:
+      # Git is required so that actions/checkout does a proper Git checkout.
+      - name: Install Git in container
+        run: |
+          apk update
+          apk add git
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      # Checks-out the repository under $GITHUB_WORKSPACE.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
+      - name: Install packages
+        run: |
+          apk update
+          apk add cmake g++ git make
+      - name: Build statically linked binaries
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          mkdir build-static
+          cd build-static
+          cmake ../ -DENABLE_LTO=ON -DENABLE_STATIC_LINKING=ON
+          # Only build the executable, no tests.
+          cmake --build . -j2 --target sha256
+      - name: Collect files
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE"/artifacts
+          cd "$GITHUB_WORKSPACE"
+          cp build-static/sha256/sha256 artifacts/
+          cp ReadMe.de.txt artifacts/
+          cp ReadMe.en.txt artifacts/
+          cp ChangeLog.md artifacts/
+          cp LICENSE artifacts/
+          VERSION=$(git describe --always)
+          mv artifacts sha256_$VERSION
+          tar czf sha256_${VERSION}_linux-amd64-generic.tar.gz sha256_$VERSION
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sha256_linux-amd64-generic
+          path: |
+            sha256_*_linux-amd64-generic.tar.gz
