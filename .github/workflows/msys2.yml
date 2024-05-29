@@ -12,12 +12,14 @@ jobs:
       # Checks-out the repository under $GITHUB_WORKSPACE.
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           submodules: 'recursive'
       - uses: msys2/setup-msys2@v2
         with:
           msystem: mingw64
           update: true
           install: >-
+            git
             mingw-w64-x86_64-cmake
             mingw-w64-x86_64-gcc
             mingw-w64-x86_64-make
@@ -47,3 +49,23 @@ jobs:
           cd build-static
           cmake -DENABLE_LTO=ON -DENABLE_STATIC_LINKING=ON ../
           cmake --build . -j2
+      - name: Collect files
+        run: |
+          export MSYSTEM=MINGW64
+          mkdir -p "$GITHUB_WORKSPACE"/artifacts
+          cd "$GITHUB_WORKSPACE"
+          cp build-static/sha256/sha256.exe artifacts/
+          cp ReadMe.de.txt artifacts/
+          cp ReadMe.en.txt artifacts/
+          cp ChangeLog.md artifacts/
+          cp LICENSE artifacts/
+          VERSION=$(git describe --always)
+          mv artifacts sha256_$VERSION
+          '/c/Program Files/7-Zip/7z.exe' a -r sha256_${VERSION}_win64.zip sha256_$VERSION
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sha256_win64
+          if-no-files-found: error
+          path: |
+            sha256_*_win64.zip
