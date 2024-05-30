@@ -39,6 +39,7 @@ jobs:
           cp ReadMe.en.txt artifacts/
           cp ChangeLog.md artifacts/
           cp LICENSE artifacts/
+          cp third-party.md artifacts/
           VERSION=$(git describe --always)
           mv artifacts sha256_$VERSION
           tar czf sha256_${VERSION}_linux-amd64-generic.tar.gz sha256_$VERSION

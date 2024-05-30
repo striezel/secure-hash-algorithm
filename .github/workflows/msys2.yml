@@ -59,6 +59,7 @@ jobs:
           cp ReadMe.en.txt artifacts/
           cp ChangeLog.md artifacts/
           cp LICENSE artifacts/
+          cp third-party.md artifacts/
           VERSION=$(git describe --always)
           mv artifacts sha256_$VERSION
           '/c/Program Files/7-Zip/7z.exe' a -r sha256_${VERSION}_win64.zip sha256_$VERSION
