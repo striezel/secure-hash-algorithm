@@ -4,11 +4,11 @@ on: push
 
 jobs:
   gcc:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
-        version: [9, 10, 11]
+        version: [9, 12, 13, 14]
     steps:
       # Checks-out the repository under $GITHUB_WORKSPACE.
       - uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
           cmake -DENABLE_LTO=ON -DENABLE_STATIC_LINKING=ON ../
           make -j2
         # Only run static build on latest version in the matrix.
-        if: matrix.version == 11
+        if: matrix.version == 14
       - name: Run tests
         run: |
           cd "$GITHUB_WORKSPACE/build"
