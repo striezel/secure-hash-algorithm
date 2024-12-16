@@ -1,5 +1,5 @@
 # We might support earlier versions, too, but try to use a recent version.
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required (VERSION 3.8...3.31)
 
 project(sha256)
 
