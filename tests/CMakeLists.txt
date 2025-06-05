@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required (VERSION 3.8...3.31)
 
 # Recurse into subdirectory for SHA-1 test (160 bit digest).
 add_subdirectory (sha160)
