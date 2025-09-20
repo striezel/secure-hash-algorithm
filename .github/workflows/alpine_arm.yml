@@ -26,15 +26,24 @@ jobs:
         run: |
           apk add nodejs
           sed -i 's~ID=alpine~ID=nopine~g' /etc/os-release
-          cd /host/home/runner/runners/*/externals/
+          cd /host/home/runner/actions-runner/*/externals/
           rm -rf node20/*
           mkdir node20/bin
           ln -s /usr/bin/node node20/bin/node
+          # Fake Node.js 24 for actions/checkout@v5.
+          # Currently, Alpine 3.22 has Node.js 22.16.0, but that seems to work,
+          # too, because it looks like checkout is not using any stuff specific
+          # to Node.js 24.
+          rm -rf node24/*
+          mkdir node24/bin
+          ln -s /usr/bin/node node24/bin/node
       # Checks-out the repository under $GITHUB_WORKSPACE.
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           submodules: 'recursive'
+          persist-credentials: false
       - name: Install packages
         run: |
           apk update

@@ -11,9 +11,11 @@ jobs:
         version: [9, 12, 13, 14]
     steps:
       # Checks-out the repository under $GITHUB_WORKSPACE.
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v5
         with:
           submodules: 'recursive'
+          persist-credentials: false
       - name: Install Debian packages
         run: |
           sudo apt-get update
