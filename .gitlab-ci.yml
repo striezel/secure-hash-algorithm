@@ -1,4 +1,4 @@
-image: debian:12-slim
+image: debian:13-slim
 
 variables:
   GIT_SUBMODULE_STRATEGY: "recursive"
@@ -7,7 +7,7 @@ variables:
 build_gcc:
   stage: build
   before_script:
-    - apt-get update && apt-get -y install catch cmake g++ libxml2-dev pkg-config
+    - apt-get update && apt-get -y install catch2 cmake g++ libxml2-dev pkg-config
     - export CC=gcc && export CXX=g++
   script:
 # Linting script also lints a lot of unrelated stuff (GUIs, archives, etc.)
@@ -25,7 +25,7 @@ build_gcc:
 build_clang:
   stage: build
   before_script:
-    - apt-get update && apt-get -y install catch clang cmake libxml2-dev pkg-config
+    - apt-get update && apt-get -y install catch2 clang cmake libxml2-dev pkg-config
     - export CC=clang && export CXX=clang++
   script:
 # Linting script also lints a lot of unrelated stuff (GUIs, archives, etc.)
