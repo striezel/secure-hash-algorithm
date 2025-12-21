@@ -46,7 +46,7 @@ jobs:
           mv artifacts sha256_$VERSION
           tar czf sha256_${VERSION}_linux-amd64-generic.tar.gz sha256_$VERSION
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: sha256_linux-amd64-generic
           path: |
