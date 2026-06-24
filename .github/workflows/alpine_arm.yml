@@ -32,13 +32,13 @@ jobs:
           rm -rf node20/*
           mkdir node20/bin
           ln -s /usr/bin/node node20/bin/node
-          # "Fake" Node.js 24 for actions/checkout@v6.
+          # "Fake" Node.js 24 for actions/checkout@v7.
           rm -rf node24/*
           mkdir node24/bin
           ln -s /usr/bin/node node24/bin/node
       # Checks-out the repository under $GITHUB_WORKSPACE.
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           submodules: 'recursive'
