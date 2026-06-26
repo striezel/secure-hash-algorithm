@@ -6,7 +6,7 @@ jobs:
   alpine:
     runs-on: ubuntu-24.04-arm
     container:
-      image: 'alpine:3.23'
+      image: 'alpine:3.24'
       # Volume needed for monkey-patch step.
       volumes:
         - /:/host
@@ -28,7 +28,7 @@ jobs:
           sed -i 's~ID=alpine~ID=nopine~g' /etc/os-release
           cd /host/home/runner/actions-runner/*/externals/
           # Fake Node.js 20 for older actions.
-          # Currently, Alpine 3.23 has Node.js 24.11.1.
+          # Currently, Alpine 3.24 has Node.js 24.17.0.
           rm -rf node20/*
           mkdir node20/bin
           ln -s /usr/bin/node node20/bin/node
